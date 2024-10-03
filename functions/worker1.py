@@ -1,6 +1,9 @@
 def process_user_query(user_query):
 
     # Import
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
     from functions import llm
     from langchain_chroma import Chroma
     from langchain_text_splitters import RecursiveCharacterTextSplitter
