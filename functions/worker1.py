@@ -12,6 +12,18 @@ def process_user_query(user_query):
     from langchain_openai import ChatOpenAI
     from langchain_openai import OpenAIEmbeddings
     from langchain.prompts import PromptTemplate
+    import os
+    from dotenv import load_dotenv
+    from openai import OpenAI
+
+    # Load Key
+    if load_dotenv('.env'):
+        OPENAI_KEY = os.getenv('OPENAI_API_KEY')
+    else:
+        OPENAI_KEY = st.secrets['OPENAI_API_KEY']
+
+    # Pass the API Key to the OpenAI Client
+    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
     # Document Loading
     loader = WebBaseLoader(["https://www.cpf.gov.sg/member/retirement-income/government-support/silver-support-scheme","https://www.cpf.gov.sg/member/retirement-income"])
