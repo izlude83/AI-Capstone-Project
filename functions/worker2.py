@@ -23,8 +23,9 @@ def process_user_query(user_query):
     else:
         OPENAI_KEY = st.secrets['OPENAI_API_KEY']
 
+    os.environ["OPEN_API_KEY"] = OPENAI_KEY
     # Pass the API Key to the OpenAI Client
-    client = OpenAI(api_key=OPENAI_KEY)
+    #client = OpenAI(api_key=OPENAI_KEY)
 
 
     # Document Loading
