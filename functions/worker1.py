@@ -15,6 +15,7 @@ def process_user_query(user_query):
     import os
     from dotenv import load_dotenv
     from openai import OpenAI
+    import streamlit as st  
 
     # Load Key
     if load_dotenv('.env'):
