@@ -10,4 +10,4 @@ st.write("Both the Policy Explainer and Eligibility Checker utilise a simple RAG
 
 st.subheader("Implementation Flowcharts")
 st.write("The flowcharts for both the Policy Explainer and Eligibility Checker are attached below for reference")
-st.image("flowchart.png", caption="Flowcharts for Policy Explainer (left) and Eligibility Checker (right).")
+st.image("Flowchart.png", caption="Flowcharts for Policy Explainer (left) and Eligibility Checker (right).")
